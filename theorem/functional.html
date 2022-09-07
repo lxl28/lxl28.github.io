@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.2.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha256-xejo6yLi6vGtAjcMIsY8BHdKsLg7QynVlFMzdQgUuy8=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"lxl28.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.12.3","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="有界线性算子 定理：对于B$^\ast$空间, 有限维等价于有界集列紧. 定理(Brouwer)：$\mathbb{R}^n$中的闭单位球B, $f:B\to B$连续, 则$f$有不动点. 定理(Schauder):B$^*$空间中的有界闭凸集B，$f:B\to B$紧, 则$f$有不动点. 定理(Riesz表示定理)：Hilbert空间上的所有有界线性泛函都形如$y(x):&#x3D;(x,y)$, 其">
+<meta property="og:type" content="website">
+<meta property="og:title" content="泛函分析">
+<meta property="og:url" content="http://lxl28.github.io/theorem/functional.html">
+<meta property="og:site_name" content="个人主页">
+<meta property="og:description" content="有界线性算子 定理：对于B$^\ast$空间, 有限维等价于有界集列紧. 定理(Brouwer)：$\mathbb{R}^n$中的闭单位球B, $f:B\to B$连续, 则$f$有不动点. 定理(Schauder):B$^*$空间中的有界闭凸集B，$f:B\to B$紧, 则$f$有不动点. 定理(Riesz表示定理)：Hilbert空间上的所有有界线性泛函都形如$y(x):&#x3D;(x,y)$, 其">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-09-05T12:12:43.892Z">
+<meta property="article:modified_time" content="2022-09-05T12:12:43.892Z">
+<meta property="article:author" content="SpadeK">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://lxl28.github.io/theorem/functional">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":true,"permalink":"http://lxl28.github.io/theorem/functional.html","path":"theorem/functional.html","title":"泛函分析"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>泛函分析 | 个人主页
+</title>
+  
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">个人主页</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-theorem"><a href="/theorem/" rel="section"><i class="fa fa-cube fa-fw"></i>定理</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%89%E7%95%8C%E7%BA%BF%E6%80%A7%E7%AE%97%E5%AD%90"><span class="nav-number">1.</span> <span class="nav-text">有界线性算子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B4%A7%E7%AE%97%E5%AD%90%E7%90%86%E8%AE%BA"><span class="nav-number">2.</span> <span class="nav-text">紧算子理论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Banach%E4%BB%A3%E6%95%B0"><span class="nav-number">3.</span> <span class="nav-text">Banach代数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%89%E7%95%8C%E6%AD%A3%E8%A7%84%E7%AE%97%E5%AD%90%E7%9A%84%E8%B0%B1%E5%88%86%E8%A7%A3"><span class="nav-number">4.</span> <span class="nav-text">有界正规算子的谱分解</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A0%E7%95%8C%E7%AE%97%E5%AD%90"><span class="nav-number">5.</span> <span class="nav-text">无界算子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%97%E5%AD%90%E5%8D%8A%E7%BE%A4"><span class="nav-number">6.</span> <span class="nav-text">算子半群</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="SpadeK"
+      src="/uploads/avatar.JPG">
+  <p class="site-author-name" itemprop="name">SpadeK</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/lxl28" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lxl28" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:lxl28@stu.pku.edu.cn" title="E-Mail → mailto:lxl28@stu.pku.edu.cn" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner page posts-expand">
+
+
+    
+    
+    
+    <div class="post-block" lang="zh-CN"><header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">泛函分析
+</h1>
+
+<div class="post-meta-container">
+</div>
+
+</header>
+
+      
+      
+      <div class="post-body">
+          <h2 id="有界线性算子"><a href="#有界线性算子" class="headerlink" title="有界线性算子"></a>有界线性算子</h2><blockquote>
+<p>定理：对于B$^\ast$空间, 有限维等价于有界集列紧.</p>
+<p>定理(Brouwer)：$\mathbb{R}^n$中的闭单位球B, $f:B\to B$连续, 则$f$有不动点.</p>
+<p>定理(Schauder):B$^*$空间中的有界闭凸集B，$f:B\to B$紧, 则$f$有不动点.</p>
+<p>定理(Riesz表示定理)：Hilbert空间上的所有有界线性泛函都形如$y(x):=(x,y)$, 其中$y\in H$. 从而$H^*=H$.</p>
+<p>定义：<u>疏集</u>是指闭包没有内点的集合. 可数个疏集的并称为<u>第一纲集</u>.</p>
+<p>定理(Baire)：完备度量空间不是可数个疏集的并.</p>
+<p>等价表述：完备度量空间可数个疏集的并没有内点.</p>
+<p>等价表述：完备度量空间可数个稠密开集的交稠密.</p>
+<p>定理(开映射定理)：Banach空间之间的有界线性算子, 如果是满射, 那么也是开映射.</p>
+<p>定理(Banach)：Banach空间之间的有界线性算子, 如果既是单射又是满射, 那么逆映射也有界.</p>
+<p>定理(等价范数定理)：Banach空间的两个范数要么等价, 要么没有强弱关系.</p>
+<p>定理(闭图像定理)：若Banach空间之间的线性算子的定义域闭且是闭算子, 则是有界算子.</p>
+<p>定理(共鸣定理)：$X$是B空间, $Y$是B$^\ast$空间, $W\subset L(X,Y)$, 若$\sup_{A\in W} ||A||=\infty$, 则$\exists x\in X$, $\sup_{A\in W}||Ax||=\infty$</p>
+<p>定理(Hahn-Banach定理)：B$^\ast$空间子空间上的有界线性泛函可保范数地延拓到全空间上.</p>
+<p>推论：对于B$^\ast$空间, $(X^\ast)^{\perp}=0$.</p>
+<p>定理(Eberlein)：自反空间的单位球弱列紧.</p>
+<p>$1\leq p&lt;\infty$, $(L^p[0,1])^\ast=L^{p^\ast}[0,1]$</p>
+<p>$(C[0,1])^\ast=BV[0,1]:=\lbrace g:[0,1]$上的右连续有界变差函数,$g(0)=0\rbrace$</p>
+</blockquote>
+<h2 id="紧算子理论"><a href="#紧算子理论" class="headerlink" title="紧算子理论"></a>紧算子理论</h2><blockquote>
+<p>定义：线性算子$T:X\to Y$称为<u>紧算子</u>, 若它将$X$中的有界集映为$Y$中的列紧集.</p>
+<p>定理：$\mathcal{C}(X,Y)$在$L(X,Y)$中闭.</p>
+<p>定义：$A\in L(X,Y)$称为<u>全连续</u>, 如果它将弱收敛列映为收敛列.</p>
+<p>定理：紧算子是全连续的; 对于自反空间, 二者等价.</p>
+<p>定义：<u>有限秩算子</u>是指值域是有限维的有界线性算子.</p>
+<p>定理：$\overline{\mathcal{F}(X,Y)}\subset\mathcal{C}(X,<br>Y)$; 对于Hilbert空间, 二者相等.</p>
+<p>定理(紧算子的谱)：设$A:X\to Y$为紧算子, 则:</p>
+<ul>
+<li>$0\in \sigma(A)$或$X$是有限维空间</li>
+<li>$\sigma(A)\setminus 0=\sigma_p(A)\setminus0$</li>
+<li>$\sigma(A)$至多以$0$为聚点</li>
+</ul>
+<p>定理(自伴紧算子的结构): 若$A$为自伴紧算子, 则存在规范正交基$\lbrace e_n\rbrace$, 使得任意$x\in H$有: $x=\sum(x,e_n)e_n$, $Ax=\sum(x,e_n)\lambda_ne_n$</p>
+<p>定理: 若$A$为Hilbert空间上的紧算子, 则存在规范正交基$\lbrace e_n\rbrace$, $\lbrace f_n\rbrace$, 使得任意$x\in H$有: $x=\sum(x,e_n)e_n$, $Ax=\sum(x,e_n)\lambda_nf_n$</p>
+<p>定义：Banach空间之间的有界线性算子$T$称为是<u>Fredholm算子</u>, 如果$N(T)$有限维, 值域是闭的且余维数有限. <u>指标</u>$\mathrm{ind}(T):=\mathrm{dim}N(T)-\mathrm{codim}R(T)$</p>
+<p>定理：$\mathscr{F}(X,Y)$是$L(X,Y)/\mathcal{C}$的可逆元全体.</p>
+</blockquote>
+<h2 id="Banach代数"><a href="#Banach代数" class="headerlink" title="Banach代数"></a>Banach代数</h2><blockquote>
+<p>定义：<u>代数</u>是具备环结构的线性空间, 如果是含幺环则称为<u>含幺代数</u>; 如果是可除环(体), 则称为<u>可除代数</u>; 如果是交换环, 则称为<u>交换代数</u>.</p>
+<p>定义：<u>代数同态</u>是环同态的线性映射, 也可称为<u>可乘线性映射</u>; <u>代数同构</u>是代数同态的线性同构.    </p>
+<p>命题：对于含幺交换代数, 一个理想是极大的$\Leftrightarrow$对应的商代数可除</p>
+<p>定义：<u>Banach代数</u>是具备代数结构的Banach空间, 且乘法运算与范数相容. 典型的例子有$L(X)$, $C(M)$.</p>
+<p>定理(Gelfand)：可除交换Banach代数均同构于$\mathbb{C}$.</p>
+<p>推论：对于含幺交换Banach代数$A$, 极大理想全体与非零可乘线性泛函$A\to\mathbb{C}$全体一一对应.</p>
+<p>Gelfand表示：设$A$是含幺交换Banach代数, Gelfand表示是映射$\Gamma:A\to C(M)$, 其中$M$是$A$的极大理想全体, 也是非零可乘线性泛函全体, 对于后者来说Gelfand表示就是赋值映射$a\mapsto ev_a:M\to\mathbb{C}$</p>
+<p>定理：Gelfand表示是含幺交换Banach代数$A\to C(M)$的连续代数同态.</p>
+<p>定理: $\sigma(a)=\mathrm{Im}(\Gamma a)$</p>
+<p>定理：对于Gelfand表示$\Gamma$:</p>
+<ul>
+<li>$\Gamma$是单射$\Leftrightarrow A$是半单的即$\cap_{J\in M}J=0$ $\Leftrightarrow (\lim ||a^n||^{1/n}=0\Rightarrow a=0)$</li>
+<li>$\Gamma$是等距$\Leftrightarrow ||a^2||=||a||^2$</li>
+</ul>
+<p>定义：代数上的一个对合是映射$\ast:A\to A$, 满足$(\lambda a+\mu b)^\ast=\bar{\lambda}a^\ast+\bar{\mu}b^\ast$, $(ab)^\ast=b^\ast a^\ast$, $(a^\ast)^\ast=a$. 称$a$为Hermitian元, 如果$a^\ast=a$.</p>
+<p>定理: 任意元素可唯一分解为$a=x+iy$, 其中$x,y$均为Hermitian元. $e^\ast=e$, $\sigma(a^\ast)=\overline{\sigma(a)}$.</p>
+<p>定义: 具有对合的Banach代数如果满足$||a^\ast a||=||a||^2$, 则称为$C^\ast$代数.</p>
+<p>定理: 对于$C^\ast$代数, $||a^\ast||=||a||$, $||e||=1$, Hermitian元的谱点必为实数.</p>
+<p>定理(Gelfand-Naimark): 对于含幺交换$C^\ast$代数, Gelfand表示是$\ast$等距同构. 即含幺交换$C^\ast$代数均形如$C(M)$.</p>
+<p>定理(Gelfand-Naimark):对于任意$C^\ast$代数, 均$\ast$等距同构于$B(H)$的子代数.</p>
+<p>定理: $A$, $B$是含幺$C^\ast$代数, $B$是$A$的子代数, $b\in B$, 则$\sigma_A(b)=\sigma_B(b)$. 从而对于正规元$T\in A$, 考虑$A_T$为包含$e$, $T$, $T^\ast$的最小$C^\ast$代数, 则$A_T$是交换$C^\ast$代数, 可应用Gelfand表示.</p>
+<p>定理: $M(A_T)=\sigma(T)$</p>
+</blockquote>
+<h2 id="有界正规算子的谱分解"><a href="#有界正规算子的谱分解" class="headerlink" title="有界正规算子的谱分解"></a>有界正规算子的谱分解</h2><blockquote>
+<p>定义: Hilbert空间中的投影算子是$P\in B(H)$, 满足$P^2=P$, $P^\ast=P$. 记$M=\mathrm{ker}(I-P)=R(P)$为$H$的闭子空间, 则$P:H\to M$, $x-Px\in M^\perp$.</p>
+<p>定理: 投影算子的四则运算:</p>
+<ul>
+<li>$P_1+P_2$是投影算子$\Leftrightarrow$ $M_1\perp M_2$ $\Leftrightarrow$ $P_1P_2=0$</li>
+<li>$P_1-P_2$是投影算子$\Leftrightarrow$ $M_1\supset M_2$</li>
+<li>$P_1P_2$是投影算子$\Leftrightarrow$ $P_1P_2=P_2P_1$, 且$P_1P_2=P_{M_1\cap M_2}$</li>
+</ul>
+<p>定义: $\Omega\subset\mathbb{C}$, $\mathcal{B}$是$\Omega$的Borel $\sigma$代数, $E:\mathcal{B}\to P(H)$, 其中$P(H)$是$H$上的投影算子全体, 满足:</p>
+<ul>
+<li>$E(\Omega)=I$</li>
+<li>$A_n\in \mathcal{B}$互不相交, $E(\cup A_n)=\sum E(A_n)$</li>
+</ul>
+<p>则$(\Omega,\mathcal{B},E)$称为谱测度空间, $E$称为$\mathcal{B}$上的谱测度.</p>
+<p>定理: $E(A_1)E(A_2)=E(A_2)E(A_1)=E(A_1\cap A_2)$</p>
+<p>定理: $\forall x,y\in H$, $E_{x,x}(A):=(E(A)x,x)$是$\mathcal{B}$上的有限测度; $E_{x,y}(A):=(E(A)x,y)$是$\mathcal{B}$上的广义测度.</p>
+<p>定义: $f\in L^\infty(\Omega,\mathcal{B},E)$, 存在唯一的算子$T\in B(H)$满足$(Tx,y)=\int f\mathrm{d}E_{x,y}$, $||T||\leq||f||_\infty$. 记$T=\int_{\Omega} f\mathrm{d}E$.</p>
+<p>定理: 谱积分的性质:</p>
+<ul>
+<li>$\int (\lambda f+\mu g)\mathrm{d}E=\lambda\int f\mathrm{d}E+\mu\int g\mathrm{d}E$</li>
+<li>$(\int f\mathrm{d}E)^\ast=\int \bar{f}\mathrm{d}E$</li>
+<li>$\int\chi_A\mathrm{d}E=E(A)$</li>
+<li>$\int f\mathrm{d}E\int g\mathrm{d}E=\int fg\mathrm{d}E$</li>
+</ul>
+<p>定义: Hilbert空间上的一族单调增右连续的投影算子$E_\lambda$, $\lambda\in(-\infty,+\infty)$称为一个谱系, 如果满足s-$E(-\infty)=0$, s-$E(+\infty)=I$. 谱系与谱测度空间$(\mathbb{R},\mathcal{B},E)$一一对应, 从而也记$\int_\mathbb{R} f\mathrm{d}E=\int_{-\infty}^{+\infty}f(\lambda)\mathrm{d}E_\lambda$</p>
+<p>定义: $T$是$B(H)$中的正规算子, $\Gamma:A_T\to C(\sigma(T))$是$\ast$等距同构, 对任意$\varphi\in C(\sigma(T))$, 记$\varphi(T):=\Gamma^{-1}(\varphi)\in A_T$</p>
+<p>定理: 正规算子$T\in B(H)$:</p>
+<ul>
+<li>$(Tx,x)\geq0$ $\Leftrightarrow$ $\sigma(T)\subset[0,+\infty)$</li>
+<li>$T^\ast=T$ $\Leftrightarrow$ $\sigma(T)\subset\mathbb{R}$</li>
+<li>$f\in C(\sigma(T))$, $f\geq0$ $\Leftrightarrow$ $f(T)\geq0$</li>
+</ul>
+</blockquote>
+<p>从$C(\sigma(T))$到$L^\infty(\sigma(T))$: 固定$x,y\in H$, $(\varphi(T)x,y)$是$C(\sigma(T))$上的连续线性泛函, 由Riesz表示定理存在复Borel测度$\mu_{x,y}$, 使得$(\varphi(T)x,y)=\int \varphi\mathrm{d}\mu_{x,y}$. 对于任意$f\in L^\infty(\sigma(T))$, 定义$f(T)\in B(H)$, $(f(T)x,y)=\int f\mathrm{d}\mu_{x,y}$. 从而诱导出$\sigma(T)$上的谱测度$E(A):=\chi_A(T)$.</p>
+<blockquote>
+<p>定理: 对于正规算子$T\in B(H)$, 上述定义了唯一的谱测度$(\sigma(T),\mathcal{B},E)$满足对于任意$f\in L^\infty(\sigma(T))$, 有$f(T)=\int_{\sigma(T)}f\mathrm{d}E$</p>
+<p>推论: 取$f(\lambda)=\lambda$, 有$T=\int_{\sigma(T)}\lambda\mathrm{d}E$. 对于有界自伴算子, 有$T=\int_{-\infty}^{+\infty}\lambda\mathrm{d}E_\lambda$; 对于酉算子, 有$T=\int_0^{2\pi}e^{i\theta}\mathrm{d}F_\theta$</p>
+<p>定理: $||f(T)x||^2=\int |f|^2\mathrm{d}||Ex||^2$</p>
+<p>定理: 对于正规算子:</p>
+<ul>
+<li>$\sigma_r(T)=\emptyset$</li>
+<li>$\lambda_0\in\sigma(T)\Leftrightarrow$ 任意邻域$U$, $E(U)\neq 0$</li>
+<li>$\lambda_0\in\sigma_p(T)\Leftrightarrow$ $E(\lbrace\lambda_0\rbrace)\neq0$</li>
+</ul>
+<p>定义: 对于正规算子, 本质谱$\sigma_{ess}(T):=\lbrace\lambda:\forall$邻域$U,\mathrm{dim}E(U)H=+\infty\rbrace$, 离散谱$\sigma_d(T):=\sigma(T)\setminus\sigma_{ess}(T)$</p>
+<p>等价定义: $\sigma_{ess}(T):=\lbrace\lambda:\lambda I-T$不是Fredholm算子$\rbrace$(注: Fredholm算子即商掉紧算子的意义下可逆)</p>
+<p>等价定义: 离散谱即有限重数的孤立特征值, 非离散谱的谱点是本质谱.</p>
+</blockquote>
+<h2 id="无界算子"><a href="#无界算子" class="headerlink" title="无界算子"></a>无界算子</h2><blockquote>
+<p>定义: 稠定算子即定义域在全空间稠密的算子.</p>
+<p>定义: Hilbert空间上的稠定线性算子可良定义其共轭算子, 即满足$(Tx,y)=(x,T^\ast y)$, $\forall x\in D(T)$, $\forall y\in D(T^\ast)$. 其中$D(T^\ast)$是使等式成立的$y$的全体.</p>
+<p>定理: $D(T^\ast)=\lbrace y:\exists M_y$, $|(Tx,y)|\leq M_y||x||\rbrace$</p>
+<p>定义: 闭算子即图像$\Gamma(T)$在$X\times Y$中闭的算子.</p>
+<p>定义: 若线性算子$T$存在扩张$S$, 使得$\Gamma(S)=\overline{\Gamma(T)}$, 则称$S$是$T$的闭包, 记为$S=\overline{T}$, 称$T$是可闭化的.</p>
+<p>定理: $T$可闭化$\Leftrightarrow$ 若$(0,y)\in\overline{\Gamma(T)}$, 则$y=0$</p>
+<p>定理: 定义$V\in B(H\times H):(x,y)\mapsto(-y,x)$, 则对于Hilbert空间上的线性算子, $\Gamma(T^\ast)=^\perp(V\Gamma(T))$</p>
+<p>定理: $T^\ast$总是闭算子</p>
+<p>定理: $T$可闭化$\Leftrightarrow$ $T^\ast$稠定</p>
+<p>定义: 若$T\subset T^\ast$, 称$T$为对称算子; 若$T=T^\ast$, 称$T$为自伴算子; 若$\overline{T}$是自伴算子, 称$T$为本质自伴算子.</p>
+<p>定理: 若$A$是对称算子, 则$\mathrm{ker}(A\pm iI)=0$; 若$A$是对称闭算子, 则$R(A\pm iI)$闭.</p>
+<p>定理: 若$A$是对称算子, 则三者等价:</p>
+<ul>
+<li>$A$自伴</li>
+<li>$A$闭, $\mathrm{ker}(A^\ast\pm iI)=0$</li>
+<li>$R(A\mp iI)=H$</li>
+</ul>
+</blockquote>
+<p>定理: Hilbert空间上的自伴算子无论是否有界, 谱集均是实数.</p>
+<blockquote>
+<p>定义: $A$是对称算子, $U:=(A-iI)(A+iI)^{-1}$是$R(A+iI)$到$R(A-iI)$的等距算子, 称为$A$的Cayley变换. $A=i(I+U)(I-U)^{-1}$称为Cayley逆变换. 若$A$是闭算子, 则$U$也是闭算子; 若$A$是自伴算子, 则$U$是$H$上的酉算子. 反之对于$1\notin\sigma_p(U)$的等距算子若满足$R(I-U)$稠密均可进行Cayley反变换, 其反变换是对称算子且再进行Cayley变换则回到$U$. 若$U$定义域闭, 则$A$是闭算子; 若$U$是酉算子, 则$A$是自伴算子.</p>
+<p>定理: 对于Cayley变换$U$, $1\notin\sigma_p(U)$; $1\in\rho(U)$ $\Leftrightarrow A$是有界自伴算子</p>
+<p>定理: 设$(\Omega,\mathcal{B},E)$是谱测度空间, 对于任意可测函数$f$, 令$D:=\lbrace x:\int |f|^2\mathrm{d}E_{x,x}&lt;\infty\rbrace$, 则存在线性算子$A$, $D(A)=D$满足$\forall x,y\in D$, $(Ax,y)=\int f\mathrm{d}E_{x,y}$, 并且有s-$\lim\int_{|f|\leq n}f\mathrm{d}Ex=Ax$. 记$A=\int f\mathrm{d}E$. 若$f$实值, 则$A$自伴.</p>
+</blockquote>
+<p>利用Cayley变换将无界自伴算子转化为有界的酉算子, 利用有界正规算子的谱分解从而得到自伴算子的谱分解定理.</p>
+<blockquote>
+<p>定理: 若$A$是自伴算子, 则存在谱系$E_{\lambda}$, $A=\int_{-\infty}^{+\infty}\lambda\mathrm{d}E_\lambda$</p>
+<p>定理(Neumann): 若$A$是对称闭算子, 有$D(A^\ast)=D(A)\oplus\mathrm{ker}(A^\ast-iI)\oplus\mathrm{ker}(A^\ast+iI)$</p>
+<p>定义: 若$A$是对称闭算子, $n_\pm:=\mathrm{dim ker}(A^\ast\mp iI)$, 称$\mathrm{def}(A)=(n_+,n_-)$为$A$的亏指数.</p>
+<p>定理: 对称闭算子有自伴扩张$\Leftrightarrow$ $n_+=n_-$</p>
+<p>定理(Neumann准则): 设$C:H\to H$是共轭等距线性映射满足$C^2=I$, 则称$C$是一个共轭. 对于对称算子, 若存在共轭$C:D(A)\to D(A)$与$A$可交换, 则$A$有自伴扩张.</p>
+<p>定义: 对于对称算子, 若存在实数$c$, 使得$(Ax,x)\geq c(x,x)$, 则称$A$下半有界, 记作$A\geq c$.</p>
+<p>定理(Friedrichs): 若$A$是下半有界的对称算子, $A\geq c$, 则$A$存在自伴扩张$\hat{A}$, 并且有$\hat{A}\geq c$.</p>
+<p>定义: 设$A$, $B$是Hilbert空间上的稠定算子, 称$B$是关于$A$有界的, 如果$D(B)\supset D(A)$, 并且存在$a,b$使得$||Bx||\leq a||Ax||+b||x||$. 其中使不等式成立的$a$的下确界称为$B$关于$A$的界.</p>
+<p>等价定义: $||x||_1:=||x||+||Ax||$, $B:(D(A),||\cdot||_1)\to H$有界 </p>
+</blockquote>
+<p>定理: $B$关于$A$有界, 且界小于$1$, 则$A+B$可闭化$\Leftrightarrow$ $A$可闭化. 并且此时$D(\overline{A+B})=D(\overline{A})$  (注:个人将有界且界小于1简称为相对小)</p>
+<p>定义: 设$A$, $B$是Hilbert空间上的稠定算子, 称$B$是关于$A$紧的, 如果$D(B)\supset D(A)$, 并且$B:(D(A),||\cdot||_1)\to H$是紧的. </p>
+<p>定理: $B$是可闭化的, $B$关于$A$紧, 则$B$关于$A$有界, 且界是$0$.</p>
+<p>定理: $B$是可闭化的, 则$B$关于$A$紧$\Leftrightarrow$ $B$关于$A+B$紧</p>
+<p>定理(Kato-Rellich): $A$自伴, $B$是相对小的对称算子, 则$A+B$也是自伴算子.</p>
+<p>推论: $A$本质自伴, $B$是相对小的对称算子, 则$A+B$也是本质自伴的, 且$\overline{A+B}=\overline{A}+\overline{B}$</p>
+<p>定理: $A$本质自伴, $B$对称, $B$关于$A$有界且界等于$1$, 则$A+B$在$D(A)$上本质自伴.</p>
+<p>定理: $A$是下有界的自伴算子, $B$是相对小的对称算子, 则$A+B$也是下有界的自伴算子.</p>
+<p>定理: 自伴算子在相对小的对称算子的扰动下, 离散谱点在计重数的意义下个数保持不变, 且分布在原谱点周围.</p>
+<p>定理(Weyl): 自伴算子在相对紧的对称算子扰动下本质谱不变.</p>
+<h2 id="算子半群"><a href="#算子半群" class="headerlink" title="算子半群"></a>算子半群</h2><blockquote>
+<p>定义: Banach空间$X$上的一族到自身的有界线性算子$T(t)$ $(t\geq0)$称为强连续线性算子半群, 如果满足:</p>
+<ul>
+<li>$T(0)=I$</li>
+<li>$T(s)T(t)=T(s+t)$</li>
+<li>$\forall x\in X$, $T(t)x$关于$t$连续</li>
+</ul>
+<p>定义: $A_t:=t^{-1}(T(t)-I)$, $D(A):=\lbrace x:\lim_{t\to0} A_tx$存在$\rbrace$, 线性算子$A:D(A)\to X$, $x\mapsto\lim_{t\to0}A_tx$称为算子半群的无穷小生成元.</p>
+<p>定理: $A$是线性稠定闭算子. $\forall x\in D(A)$, $\frac{\mathrm{d}}{\mathrm{d}t}T(t)x=T(t)Ax=AT(t)x$</p>
+<p>定义: 对于算子半群, 如果$||T(t)||\leq 1$, 则称为压缩半群.</p>
+<p>定理: 对于压缩半群, $\lbrace\mathrm{Re}(\lambda)&gt;0\rbrace\subset\rho(A)$, $(\lambda I-A)^{-1}=\int_0^\infty e^{-\lambda t}T(t)\mathrm{d}t$</p>
+<p>定理(Hille-Yosida): 对于线性稠定闭算子, 成为压缩半群的生成元$\Leftrightarrow$</p>
+<ul>
+<li>$(0,+\infty)\subset\rho(A)$</li>
+<li>$||R_\lambda(A)||\leq \lambda^{-1}$</li>
+</ul>
+<p>定理(Hille-Yosida-Phillips): 对于线性稠定闭算子, 成为算子半群的生成元$\Leftrightarrow$ $\exists \omega, M&gt;0$</p>
+<ul>
+<li>$(\omega,+\infty)\subset\rho(A)$</li>
+<li>$||R_\lambda(A)^n||\leq M(\lambda-\omega)^{-n}$</li>
+</ul>
+<p>定义: Hilbert空间上的一族酉算子$U(t)$ $(t\in\mathbb{R})$称为强连续酉算子群, 如果:</p>
+<ul>
+<li>$U(t)U(s)=U(t+s)$</li>
+<li>$\forall x\in H$, $U(t)x$关于$t$连续</li>
+</ul>
+<p>定理: 强连续压缩半群的共轭半群$T^\ast(t)$也是强连续压缩半群.</p>
+<p>定理(Stone): 对于Hilbert空间上的稠定闭算子$A$, 成为强连续酉算子群的生成元$\Leftrightarrow$ 存在自伴算子$B$, $A=iB$. 此时$U(t)=\mathrm{exp}(itB)$. 若取$B$的谱族$E_\lambda$, 则$U(t)=\int_{-\infty}^{+\infty} e^{it\lambda}\mathrm{d}E_\lambda$</p>
+</blockquote>
+
+      </div>
+      
+      
+      
+    </div>
+
+    
+    
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa-solid fa-k"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">SpadeK</span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js","integrity":"sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI="}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300,"hOffset":-15,"vOffset":-15},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+</html>

@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>一些概念不同版本定义的区别</title>
+    <url>/2022/09/06/diffdef/</url>
+    <content><![CDATA[<p>例如傅里叶变换, 黎曼曲率张量, 反对称张量的外积等概念, 不同的教材采用的定义可能会相差个符号或是常数倍数. 这种现象是因为如果在定义中采用较简单的形式, 那么在性质中就会较复杂, 有些追求定义的简洁性和自然性, 而有些追求性质的简洁性和对称性. 这里对这种情况作以汇总.</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><span id="more"></span></h2><h2 id="傅里叶变换"><a href="#傅里叶变换" class="headerlink" title="傅里叶变换"></a>傅里叶变换</h2><h4 id="形式1"><a href="#形式1" class="headerlink" title="形式1"></a>形式1</h4><blockquote>
+<p>定义: $\hat{f}(s):=\int_{\mathbb{R}^n} f(t)e^{-2\pi ist}\mathrm{d}t$</p>
+<p>反变换: $\check{f}(s):=(2\pi)^{-n}\int_{\mathbb{R}^n} f(t)e^{2\pi ist}\mathrm{d}t$</p>
+<p>$(f\ast g)^\wedge=\hat{f}\cdot\hat{g}$</p>
+</blockquote>
+<h4 id="形式2"><a href="#形式2" class="headerlink" title="形式2"></a>形式2</h4><blockquote>
+<p>定义: $\hat{f}(s):=(2\pi)^{-n/2}\int_{\mathbb{R}^n} f(t)e^{-2\pi ist}\mathrm{d}t$</p>
+<p>反变换: $\check{f}(s):=(2\pi)^{-n/2}\int_{\mathbb{R}^n} f(t)e^{2\pi ist}\mathrm{d}t$</p>
+<p>$(f\ast g)^\wedge=(2\pi)^{n/2}\hat{f}\cdot\hat{g}$</p>
+</blockquote>
+<h2 id="反对称张量的外积"><a href="#反对称张量的外积" class="headerlink" title="反对称张量的外积"></a>反对称张量的外积</h2><p>$T\in\bigwedge^{p}(V^\ast)$, $S\in\bigwedge^q(V^\ast)$</p>
+<h4 id="形式1-1"><a href="#形式1-1" class="headerlink" title="形式1"></a>形式1</h4><blockquote>
+<p>定义: $T\wedge S:=\mathrm{Alt}(T\otimes S)$</p>
+<p>$\omega^1\wedge\cdots\wedge\omega^n(e_1,\cdots,e_n)=\frac{1}{n!}\det(\omega^i(e_j))$</p>
+<h4 id="形式2-1"><a href="#形式2-1" class="headerlink" title="形式2"></a>形式2</h4><p>定义: $T\wedge S:=\frac{(p+q)!}{p!q!}\mathrm{Alt}(T\otimes S)$</p>
+<p>$\omega^1\wedge\cdots\wedge\omega^n(e_1,\cdots,e_n)=\det(\omega^i(e_j))$</p>
+</blockquote>
+]]></content>
+  </entry>
+  <entry>
+    <title>一些有多个等价定义的概念</title>
+    <url>/2022/09/04/equivdef/</url>
+    <content><![CDATA[<p>数学中有一些概念涉及不同方向, 并均有各自风格的定义. 这些定义在重叠部分是彼此等价的, 是不同方向的连接纽带. 这里进行简要汇总.<br><span id="more"></span></p>
+<hr>
+<h1 id="Euler示性数"><a href="#Euler示性数" class="headerlink" title="Euler示性数"></a>Euler示性数</h1><h4 id="Lefschetz数定义"><a href="#Lefschetz数定义" class="headerlink" title="Lefschetz数定义"></a>Lefschetz数定义</h4><p>设$X$是紧致定向流形, Euler示性数定义为恒同映射的Lefschetz数: $\chi(X):=L(\mathrm{id}_X)$</p>
+<h4 id="胞腔剖分定义"><a href="#胞腔剖分定义" class="headerlink" title="胞腔剖分定义"></a>胞腔剖分定义</h4><p>设$X$是CW复形, Euler示性数定义为各维数胞腔数的交错和: $\chi(X):=\sum(-1)^kc_k$, 其中$c_k$为$k$维胞腔个数.</p>
+<h4 id="上同调定义"><a href="#上同调定义" class="headerlink" title="上同调定义"></a>上同调定义</h4><p>设$X$是拓扑空间, Euler示性数定义为Betti数的交错和: $\chi(X):=\sum(-1)^kb_k$, 其中$b_k$是第$k$个Betti数, 即第$k$个奇异上同调群的秩: $b_k=\mathrm{rank}(H^k_{sing}(X))$</p>
+<h3 id="有关结论"><a href="#有关结论" class="headerlink" title="有关结论"></a>有关结论</h3><blockquote>
+<p>Gauss-Bonnet定理：对于二维可定向闭曲面$\Sigma$, $\iint K\mathrm{d}\sigma=2\pi\chi(\Sigma)$</p>
+<p>奇数维紧致流形的Euler数为$0$.</p>
+<p>Hopf-Poincare定理：$\vec{v}$是闭流形$X$上的只有孤立零点的光滑向量场, 则$\sum_{\vec{v}(p)=0}\mathrm{ind}_p(\vec{v})=\chi(X)$</p>
+</blockquote>
+<hr>
+]]></content>
+  </entry>
+  <entry>
+    <title>SpadeK&#39;s 起始页</title>
+    <url>/2022/09/01/hello-world/</url>
+    <content><![CDATA[<blockquote class="blockquote-center">
+<p> Wir müssen wissen, wir werden wissen. </p>
+<p>我们必须知道, 我们必将知道。</p>
+<pre><code> ———— David Hilbert 
+</code></pre>
+</blockquote>
+<h2 id="目前可以在菜单里查看一些学过的定理"><a href="#目前可以在菜单里查看一些学过的定理" class="headerlink" title="目前可以在菜单里查看一些学过的定理"></a>目前可以在菜单里查看一些学过的<a href="./../theorem/index">定理</a></h2>]]></content>
+  </entry>
+  <entry>
+    <title>Cheeger-Colding理论</title>
+    <url>/theorem/cheeger.html</url>
+    <content><![CDATA[<p>Cheeger-Colding理论研究Ricci曲率有下界的流形的一致性质，以及它们在Gromov-Hausdorff度量下的极限空间的性质.</p>
+<h2 id="基础概念"><a href="#基础概念" class="headerlink" title="基础概念"></a>基础概念</h2><blockquote>
+<p>定义：度量空间$(X,d)$中的两个有界闭集$A, B$, 它们的<u>Hausdorff距离</u>定义为<br>$d_H(A,B):=\inf\lbrace\epsilon&gt;0:A\subset B_{\epsilon}(B), B\subset B_{\epsilon}(A)\rbrace$</p>
+<p>定义：两个紧致度量空间$(X,d_X)$, $(Y,d_Y)$, 它们的<u>Gromov-Hausdorff距离</u>定义为$d_{GH}(X,Y):=\inf\lbrace d_H(X,Y):任意的X\sqcup Y上与d_X和d_Y相容的度量\rbrace$</p>
+</blockquote>
+<p>…</p>
+<blockquote>
+<p>定义：$(X,d_X)$是紧致度量空间, $\mathrm{diam}(X)\leq\pi$, 它对应的<u>度量锥</u>定义为度量空间$((0,+\infty)\times X,d_c)$的完备化, 其中$d^2_c((r_1,x_1),(r_2,x_2)):=r_1^2+r_2^2-2r_1r_2\cos d_X(x_1,x_2)$</p>
+</blockquote>
+<h2 id="预备定理"><a href="#预备定理" class="headerlink" title="预备定理"></a>预备定理</h2><blockquote>
+<p>定理(体积收敛定理)：设$M^n_i,M^n$是一列流形,$\mathrm{Ric}_{M_i},\mathrm{Ric}_{M}\geq -1$, $\forall r&gt;0$, 若$B_r(x_i)\xrightarrow{GH}B_r(x)$, 其中$x_i\in M_i,x\in M$, 则有$\mathrm{Vol}(B_r(x_i))\to\mathrm{Vol}(B_r(x))$</p>
+<p>定理(体积锥蕴含度量锥)：</p>
+</blockquote>
+]]></content>
+  </entry>
+  <entry>
+    <title>复几何</title>
+    <url>/theorem/complex.html</url>
+    <content><![CDATA[<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><p>…</p>
+<h2 id="代数化定理"><a href="#代数化定理" class="headerlink" title="代数化定理"></a>代数化定理</h2><blockquote>
+<p>定理(Chow)：$\mathbb{CP}^n$的解析子簇, 特别地, 所有的射影流形, 都是射影代数簇.</p>
+<p>定理(Kodaira嵌入定理)：若复流形$X$有一个正的全纯线丛$L$, 则存在$N$, 使得$X$可全纯嵌入到$\mathbb{CP}^N$.</p>
+</blockquote>
+<p>…</p>
+<h2 id="Bergman核"><a href="#Bergman核" class="headerlink" title="Bergman核"></a>Bergman核</h2><blockquote>
+<p>定义：设$(X,\omega,L,h)$是一个Kahler流形和其上的线丛, 满足$\omega=\frac{\sqrt{-1}}{2\pi}\Theta_{L,h}$, 则称为是一组<u>polarized pair</u>, $X$称为<u>polarized Kahler流形</u>.</p>
+<p>定义：在$H^0(X,\mathcal{O}(L^{\otimes m}))$上定义一个内积: $(s,t):=\int_X\left&lt; s,t\right&gt;_{h^m}\frac{\omega^n}{n!}$. 任取$H^0(X,\mathcal{O}(L^{\otimes m}))$的一组标准正交基$\lbrace s_1,\cdots,s_{N_m} \rbrace$, 定义<u>第m个Bergman核</u>为光滑函数$\rho_m(z):=\sum |s_i(z)|^2_{h^m}$.</p>
+<p>定理(等价定义)：$\rho_m(z):=\sup\lbrace|s(z)|^2_{h^m}:||s||_{L^2}=1 \rbrace$</p>
+</blockquote>
+]]></content>
+  </entry>
+  <entry>
+    <title>目录</title>
+    <url>/categories/index.html</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>微分拓扑</title>
+    <url>/theorem/difftop.html</url>
+    <content><![CDATA[<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><blockquote>
+<p>定理(Whitney嵌入定理)：光滑n维流形可嵌入到$\mathbb{R}^{2n}$中, 可浸入到$\mathbb{R}^{2n-1}$.</p>
+<p>定理(Sard定理)：流形间光滑映射的临界值是零测集.</p>
+<p>定义：$Z\subset Y$, 称$f:X\to Y$与$Z$<u>横截相交</u>是指$\forall x\in f^{-1}(Z)$, $df_x(T_xX)+T_{f(x)}Z=T_{f(x)}Y$, 记作$f\pitchfork Z$.</p>
+<p>定理：若$f\pitchfork Z$, 则$f^{-1}(Z)$是$X$的子流形, 且$\mathrm{codim}(f^{-1}(Z))=\mathrm{codim}(Z)$</p>
+<p>定理：横截性是稳定的: 若有光滑同伦$f_t:X\to Y$, 且$f_0\pitchfork Z$, 则$\exists \epsilon&gt;0$, 使得$t\in (0,\epsilon)$时有$f_t\pitchfork Z$. </p>
+<p>定理：横截性是普遍的: 任意连续映射均可通过同伦使其横截.</p>
+<p>定理(横截定理)：$F:X\times S\to Y$, $Z\subset Y$, $\partial S=\partial Z=\partial Y=\emptyset$. 若$F\pitchfork Z$, $\partial F\pitchfork Z$, 则几乎所有的$s$, $f_s\pitchfork Z$, $\partial f_s\pitchfork Z$. </p>
+<p>定理($\varepsilon$-邻域定理)：对于$X\subset\mathbb{R}^N$, 存在光滑函数$\epsilon: X\to \mathbb{R}_{&gt;0}$, 存在映射$\pi:X^{\epsilon}\to X$, 将$w\in X^{\epsilon}$映为$X$中唯一的距离最小的点$\pi(w)$, $\pi$是淹没.</p>
+<p>定理(管状邻域定理)：对于$Z\subset X$, 存在$Z$的开邻域与$Z$关于$X$的法丛微分同胚, 且限制在$Z$上是恒同映射.</p>
+<p>定理(横截延拓定理)：若$f:X\to Y$, $\partial f\pitchfork Z$, 则存在与$f$同伦的$\tilde{f}:X\to Y$, $\tilde{f}\pitchfork Z$, $\partial\tilde{f}=\partial f$.</p>
+</blockquote>
+<h2 id="Morse函数"><a href="#Morse函数" class="headerlink" title="Morse函数"></a>Morse函数</h2><blockquote>
+<p>定义：对于$f:X\to\mathbb{R}$, 临界点即满足$df_x=0$的点. 称临界点$x_0$是<u>非退化的</u>, 如果$H_f(x_0)$是非退化的.</p>
+<p>定义：称$f:X\to\mathbb{R}$是<u>Morse函数</u>, 如果$f$的所有临界点均是非退化的.</p>
+<p>定理(Morse引理)：若$p$是$f:X\to\mathbb{R}$非退化的临界点, 则在$p$附近存在局部坐标$\lbrace x_1,\cdots,x_n\rbrace$, 使得$f(x)=f(p)-x_1^2-\cdots-x_k^2+x_{k+1}^2+\cdots+x_n^2$, 记$\mathrm{ind}(H_f(p))=k$.</p>
+<p>定理：对于任意的$f:X\to\mathbb{R}$, $X\subset\mathbb{R}^n$, 若对$a\in\mathbb{R}^n$, 记$f_a(x):=f(x)+a\cdot x$, 则对于几乎所有的$a$, $f_a$是Morse函数.</p>
+</blockquote>
+<h2 id="相交理论"><a href="#相交理论" class="headerlink" title="相交理论"></a>相交理论</h2><p>这一节均需假设$X$紧, $\mathrm{dim}(X)+\mathrm{dim}(Z)=\mathrm{dim}(Y)$, $Z\subset Y$, $f:X\to Y$.</p>
+<h4 id="模2相交理论"><a href="#模2相交理论" class="headerlink" title="模2相交理论"></a>模2相交理论</h4><blockquote>
+<p>定义：若$f\pitchfork Z$, 则$f^{-1}(Z)$是$X$的零维子流形, 从而是有限的孤立点集. 定义$f$的<u>模2相交数</u>为$I_2(f,Z):=|f^{-1}(Z)|\ \mathrm{mod}2$.</p>
+<p>定理：若$f_1,f_2\pitchfork Z$, 且$f_1$和$f_2$同伦, 则$I_2(f_1,Z)=I_2(f_2,Z)$</p>
+<p>定义：对于一般的$f:X\to Z$, 取$\tilde{f}$和$f$同伦, 且$\tilde{f}\pitchfork Z$, 定义$I_2(f,Z):=I_2(\tilde{f},Z)$</p>
+<p>定义：特殊情形: $\mathrm{dim}(X)=\mathrm{dim}(Y)$, $Z=\lbrace z\rbrace$, 若$Y$连通, 则与$z$的选取无关. 定义$f$的<u>模2映射度</u>$\mathrm{deg}_2(f):=I_2(f,\lbrace z\rbrace)$</p>
+<p>定义：特殊情形: $f:X^n\to \mathbb{R}^{n+1}$, 对于$z\notin f(X)$, $u:=\frac{f-z}{||f-z||}:X\to \mathbb{S}^n$, 定义$f$关于$z$的<u>模2环绕数</u>$w_2(f,z):=\mathrm{deg}_2(u)$.</p>
+<p>定理：$f:X^n\to \mathbb{R}^n$, $z\in\mathbb{R}^n\setminus\mathrm{im}(\partial f)$, $f\pitchfork z$, 则$w_2(\partial f,z)=|f^{-1}(z)|\ \mathrm{mod}2$</p>
+<p>定理(Borsuk-Ulam)：$f:\mathbb{S}^n\to\mathbb{R}^{n+1}\setminus\lbrace0\rbrace$, $f(-x)=-f(x)$, 则$w_2(f,0)=1$.</p>
+</blockquote>
+<h4 id="定向相交理论"><a href="#定向相交理论" class="headerlink" title="定向相交理论"></a>定向相交理论</h4><p>这一部分均需在前面的假设下进一步假设$X$, $Y$, $Z$为定向流形.</p>
+<blockquote>
+<p>定义：对于$f\pitchfork Z$, 定义$f$与$Z$的<u>定向相交数</u>为:$I(f,Z):=\sum_{x\in f^{-1}(Z)}\mathrm{sgn}(x)$. 其中$\mathrm{sgn}(x)$由$df_x(T_xX)\oplus T_{f(x)}Z=T_{f(x)}Y$确定.</p>
+<p>定理：若$f_1,f_2\pitchfork Z$, 且$f_1$和$f_2$同伦, 则$I(f_1,Z)=I(f_2,Z)$</p>
+<p>定义：对于一般的$f:X\to Z$, 取$\tilde{f}$和$f$同伦, 且$\tilde{f}\pitchfork Z$, 定义$I(f,Z):=I(\tilde{f},Z)$</p>
+<p>定义：特殊情形: $\mathrm{dim}(X)=\mathrm{dim}(Y)$, $Z=\lbrace z\rbrace$, 若$Y$连通, 则与$z$的选取无关. 定义$f$的<u>映射度</u>$\mathrm{deg}(f):=I(f,\lbrace z\rbrace)$</p>
+</blockquote>
+<h4 id="映射的相交数"><a href="#映射的相交数" class="headerlink" title="映射的相交数"></a>映射的相交数</h4><p>将相交理论推广到对称的情形, 假设$X$, $Y$, $Z$为光滑无边流形, $X$和$Z$紧致, $\mathrm{dim}(X)+\mathrm{dim}(Z)=\mathrm{dim}(Y)$</p>
+<blockquote>
+<p>定义：称$f:X\to Y$和$g:Z\to Y$<u>横截</u>, 若对于$\forall f(x)=g(z)=y$, $df_x(T_xX)+dg_z(T_zZ)=T_yY$</p>
+<p>定义：对于$f\pitchfork g$, $f$和$g$的<u>定向相交数</u>定义为$I(f,g):=\sum_{f(x)=g(z)}\mathrm{sgn}(x,z)$</p>
+<p>定理：$f\pitchfork g\Leftrightarrow f\times g\pitchfork \Delta\subset Y\times Y$, $I(f,g)=(-1)^{\mathrm{dim}(Z)}I(f\times g,\Delta)$</p>
+<p>定义：对于一般的$f:X\to Y$, $g:Z\to Y$, 定义$I(f,g):=(-1)^{\mathrm{dim}(Z)}I(f\times g,\Delta)$</p>
+<p>定理：若$f_1\simeq f_2$, $g_1\simeq g_2$, 则$I(f_1,g_1)=I(f_2,g_2)$</p>
+<p>定理：若$Z\subset Y$, 则$I(f,i_Z)=I(f,Z)$</p>
+</blockquote>
+<h4 id="Lefschetz不动点理论"><a href="#Lefschetz不动点理论" class="headerlink" title="Lefschetz不动点理论"></a>Lefschetz不动点理论</h4><p>这一部分均假设$X$紧致可定向, $f:X\to X$.</p>
+<blockquote>
+<p>定义：$\Delta\subset X\times X$为对角线, 定义$f$的<u>Lefschetz数</u>为$L(f):=I(\Delta,\mathrm{graph}(f))$</p>
+<p>定理：若$L(f)\neq 0$, 则$f$有不动点.</p>
+<p>定理：$L(f)$是同伦不变量.</p>
+<p>定义：定义$X$的<u>Euler示性数</u>$\chi(X):=L(\mathrm{id}_X)$</p>
+<p>定义：称不动点$x$为<u>Lefschetz不动点</u>, 如果$df_x$没有特征值1; 称$f:X\to X$为<u>Lefschetz映射</u>, 若$\mathrm{graph}(f)\pitchfork \Delta$, 即所有的不动点都是Lefschetz不动点.</p>
+<p>定理：Lefschetz不动点是孤立的不动点.</p>
+<p>定理：任意自映射均可同伦成Lefschetz映射.</p>
+<p>定义：对于Lefschetz不动点, 定义<u>局部Lefschetz数</u>为$L_x(f):=\mathrm{sgn}(x,x)$, 也是$\mathrm{sgn}(\mathrm{det}(df_x-I))$. 对于Lefschetz映射, $L(f)=\sum_{f(x)=x}L_x(f)$</p>
+<p>定理(分裂定理)：对于孤立不动点$x\in U$, 可以局部地同伦使其在$U$中只有Lefschetz不动点, 并在$U$的某个紧集之外保持不变.</p>
+<p>定义：对于孤立不动点, 在局部坐标下, 可定义映射$u:=\frac{f-\mathrm{id}}{||f-\mathrm{id}||}:\partial B_{\epsilon}=\mathbb{S}^{n-1}\to \mathbb{S}^{n-1}$. 对于Lefschetz不动点, $\mathrm{deg}(u)=L_x(f)$, 从而对于一般的孤立不动点, 定义<u>局部Lefschetz数</u>$L_x(f):=\mathrm{deg}(u)$</p>
+<p>定理：若$f$的不动点都是孤立的, 则$L(f)=\sum_{f(x)=x}L_x(f)$</p>
+<p>定义：设$\vec{v}$是$X$的光滑向量场, $p$是$\vec{v}$的孤立零点, 则在局部坐标下可定义映射$u:=\frac{\vec{v}}{||\vec{v}||}:\partial B_{\epsilon}\to\mathbb{S}^{n-1}$, 定义$\vec{v}$在$p$的<u>指数</u>为$\mathrm{ind}_p(\vec{v}):=\mathrm{deg}(u)$</p>
+<p>定理(Poincare-Hopf)：若$\vec{v}$的零点都是孤立的, 则$\sum_{\vec{v}(p)=0}\mathrm{ind}_p(\vec{v})=\chi(X)$</p>
+</blockquote>
+<h2 id="积分"><a href="#积分" class="headerlink" title="积分"></a>积分</h2><blockquote>
+<p>定理：设$X^n$,$Y^n$紧致定向, $f:X\to Y$, 对于$\omega\in\Omega^n(Y)$, 有$\int_X f^\ast\omega=\mathrm{deg}(f)\int_Y\omega$ </p>
+<p>定义：$f:X^n\to Y^n$, 定义$f$的<u>Jacobian</u>函数$J_f(x)$为满足$f^\ast\mathrm{d}V_Y=J_f(x)\mathrm{d}V_X$的函数.</p>
+<p>定理(Gauss-Bonnet)：设$X^{2k}\subset\mathbb{R}^{2k+1}$为紧致偶数维超曲面, $g=\vec{n}(x):X\to\mathbb{S}^{2k}$为Gauss映射, 则$\int_XJ_g(x)\mathrm{d}V_X=\frac{1}{2}|\mathbb{S}^{2k}|\chi(X)$</p>
+</blockquote>
+]]></content>
+  </entry>
+  <entry>
+    <title>二阶椭圆型偏微分方程</title>
+    <url>/theorem/elliptic.html</url>
+    <content><![CDATA[<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><blockquote>
+<p>定义：二阶线性偏微分方程形如$-a^{ij}(x)\partial_i\partial_ju+b^i(x)\partial_iu(x)+c(x)u(x)=f(x)$. 方程是<u>椭圆型</u>的, 是指系数矩阵$(a^{ij}(x))$在定义域内处处正定; 方程是<u>严格椭圆型</u>的, 是指$\exists \epsilon_0&gt;0$, $\forall x\in \Omega$, $(a^{ij}(x))\geq \epsilon_0$.</p>
+</blockquote>
+<h2 id="调和函数和Poisson方程"><a href="#调和函数和Poisson方程" class="headerlink" title="调和函数和Poisson方程"></a>调和函数和Poisson方程</h2><blockquote>
+<p>定义：称$u\in C^2(\Omega)$是<u>调和</u>的, 若$\Delta u=0$; 称方程$\Delta u=f$为<u>Poisson方程</u>, 这是最简单的二阶椭圆型方程.</p>
+<p>定理：调和函数满足平均值公式; 满足平均值公式的连续函数是调和函数.</p>
+<p>推论：调和函数有强极值原理: 它不能在内部取到最值, 除非它是常数.</p>
+</blockquote>
+<p>…</p>
+<h2 id="Schauder估计"><a href="#Schauder估计" class="headerlink" title="Schauder估计"></a>Schauder估计</h2><p>…</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>学过的定理记录</title>
+    <url>/theorem/index.html</url>
+    <content><![CDATA[<h2 id="给所有学过的定理做个记录便于需要的时候查找使用。"><a href="#给所有学过的定理做个记录便于需要的时候查找使用。" class="headerlink" title="给所有学过的定理做个记录便于需要的时候查找使用。"></a>给所有学过的定理做个记录便于需要的时候查找使用。</h2><hr>
+<ul>
+<li><a href="./functional">泛函分析</a></li>
+<li><a href="./difftop">微分拓扑</a></li>
+<li><a href="./diffgeo">古典微分几何</a></li>
+<li><a href="./riemann">黎曼几何</a></li>
+<li><a href="./elliptic">椭圆方程</a></li>
+<li><a href="./ricci">Ricci流</a></li>
+<li><a href="./complex">复几何</a></li>
+<li><a href="./cheeger">Cheeger-Colding理论</a></li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>Ricci流</title>
+    <url>/theorem/ricci.html</url>
+    <content><![CDATA[<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><blockquote>
+<p>定义：对于黎曼流形$(M^n,g_0)$, <u>Ricci流</u>方程为: $\partial_t g(t)=-2\mathrm{Ric}_g$, <u>归一化的Ricci流</u>方程为: $\partial_tg(t)=-2\mathrm{Ric}_g+\frac{2}{n}rg$, 其中$r=\int\hspace{-0.9em}-R\mathrm{d}V_g$.</p>
+<p>性质：对归一化的Ricci流, $\mathrm{Vol}(g(t))\equiv C$.</p>
+</blockquote>
+<h2 id="二维情形"><a href="#二维情形" class="headerlink" title="二维情形"></a>二维情形</h2><p>Ricci流方程变为$\partial_t g=-Rg$; 归一化Ricci流方程变为$\partial_t g=(r-R)g$, 其中$r=\frac{\int R\mathrm{d}V_g}{\int \mathrm{d}V_g}=\frac{4\pi\chi(M)}{\mathrm{Vol}(M)}=r_0$.</p>
+<blockquote>
+<p>定理：对于闭曲面上的任意初始度量, 归一化Ricci流均长时间存在, 且光滑收敛于常曲率度量$g_{\infty}$.</p>
+<p>推论(单值化定理)：闭曲面上的任意度量均共形等价于常曲率度量.</p>
+</blockquote>
+<h2 id="三维情形"><a href="#三维情形" class="headerlink" title="三维情形"></a>三维情形</h2><p>…</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>黎曼几何</title>
+    <url>/theorem/riemann.html</url>
+    <content><![CDATA[<p>黎曼几何研究具备度量结构的微分流形的性质, 光滑流形总可以赋予黎曼度量, 而度量又可以反映出流形的拓扑性质.</p>
+<h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><blockquote>
+<p>定义：光滑流形上的<u>黎曼度量</u>$g$是一个处处正定的对称$(0,2)$张量. 具备黎曼度量的光滑流形$(M,g)$称为黎曼流形.</p>
+<p>定理：任何光滑流形均可赋予黎曼度量.</p>
+<p>定义：黎曼流形上的光滑曲线$\gamma:[a,b]\to M$的<u>长度</u>定义为$L(\gamma):=\int_a^b g(\gamma’,\gamma’)^{1/2}\mathrm{d}t$, 分段光滑曲线的长度可定义为各段长度之和.</p>
+<p>定义：黎曼度量诱导出流形上的度量结构: 任意两点的距离定义为连接两点的分段光滑曲线的长度的下确界.</p>
+<p>定理：黎曼度量诱导的拓扑与光滑流形原有的拓扑相同.</p>
+</blockquote>
+<p>…</p>
+<h2 id="比较定理"><a href="#比较定理" class="headerlink" title="比较定理"></a>比较定理</h2><p>…</p>
+<blockquote>
+<p>定理(体积比较定理)：若流形$M$有$\mathrm{Ric}\geq \Lambda$, 则$\forall p\in M$, $\frac{\mathrm{Vol}(B_r(p))}{V^n_{\Lambda}(r)}$关于$r$单调递减, 特别地$\mathrm{Vol}(B_r(p))\leq V^n_{\Lambda}(r)$.</p>
+</blockquote>
+<p>…</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>古典微分几何</title>
+    <url>/theorem/diffgeo.html</url>
+    <content><![CDATA[<h2 id="曲线论"><a href="#曲线论" class="headerlink" title="曲线论"></a>曲线论</h2><blockquote>
+<p>定理(曲线论基本定理)：给定任意$[a,b]$上的两个连续函数$\kappa(s)$, $\tau(s)$, 满足$\kappa(s)&gt;0$(处处非零), 则存在$\mathbb{R}^3$中$[a,b]$上的正则参数曲线$\vec{r}(s)$, 以$s$为弧长参数, 以$\kappa(s)$, $\tau(s)$为曲线的曲率和挠率, 且在相差刚体运动的意义下唯一.</p>
+</blockquote>
+<h2 id="曲面论"><a href="#曲面论" class="headerlink" title="曲面论"></a>曲面论</h2><blockquote>
+<p>定理(曲面论基本定理)：给定任意$D\subset\mathbb{R}^2$上的两个对称二次微分形式$\mathrm{I}=g_{\alpha\beta}\mathrm{d}u^\alpha\mathrm{d}u^\beta$, $\mathrm{II}=b_{\alpha\beta}\mathrm{d}u^\alpha\mathrm{d}u^\beta$, 满足$\mathrm{I}$正定和Gauss-Codazzi方程, 则任意点$(u_0^1,u_0^2)\in D$, 则存在邻域$U\subset D$, 存在$\mathbb{R}^3$中$D$上的正则参数曲面$S$, 以$\mathrm{I}|_U$, $\mathrm{II}|_U$为曲面的第一和第二基本形式, 且在相差刚体运动的意义下唯一.</p>
+<p>定理(Gauss-Bonnet公式)：曲线$C$是定向曲面$S$上的分段光滑简单闭曲线, 围成的区域$D$是$S$上的单连通区域, 若称$\sum\alpha_i$是点曲率, $\oint \kappa_g\mathrm{d}s$是线曲率, $\iint K\mathrm{d}\sigma$是面曲率, 则点曲率$+$线曲率$+$面曲率$=2\pi$.</p>
+</blockquote>
+]]></content>
+  </entry>
+  <entry>
+    <title>泛函分析</title>
+    <url>/theorem/functional.html</url>
+    <content><![CDATA[<h2 id="有界线性算子"><a href="#有界线性算子" class="headerlink" title="有界线性算子"></a>有界线性算子</h2><blockquote>
+<p>定理：对于B$^\ast$空间, 有限维等价于有界集列紧.</p>
+<p>定理(Brouwer)：$\mathbb{R}^n$中的闭单位球B, $f:B\to B$连续, 则$f$有不动点.</p>
+<p>定理(Schauder):B$^*$空间中的有界闭凸集B，$f:B\to B$紧, 则$f$有不动点.</p>
+<p>定理(Riesz表示定理)：Hilbert空间上的所有有界线性泛函都形如$y(x):=(x,y)$, 其中$y\in H$. 从而$H^*=H$.</p>
+<p>定义：<u>疏集</u>是指闭包没有内点的集合. 可数个疏集的并称为<u>第一纲集</u>.</p>
+<p>定理(Baire)：完备度量空间不是可数个疏集的并.</p>
+<p>等价表述：完备度量空间可数个疏集的并没有内点.</p>
+<p>等价表述：完备度量空间可数个稠密开集的交稠密.</p>
+<p>定理(开映射定理)：Banach空间之间的有界线性算子, 如果是满射, 那么也是开映射.</p>
+<p>定理(Banach)：Banach空间之间的有界线性算子, 如果既是单射又是满射, 那么逆映射也有界.</p>
+<p>定理(等价范数定理)：Banach空间的两个范数要么等价, 要么没有强弱关系.</p>
+<p>定理(闭图像定理)：若Banach空间之间的线性算子的定义域闭且是闭算子, 则是有界算子.</p>
+<p>定理(共鸣定理)：$X$是B空间, $Y$是B$^\ast$空间, $W\subset L(X,Y)$, 若$\sup_{A\in W} ||A||=\infty$, 则$\exists x\in X$, $\sup_{A\in W}||Ax||=\infty$</p>
+<p>定理(Hahn-Banach定理)：B$^\ast$空间子空间上的有界线性泛函可保范数地延拓到全空间上.</p>
+<p>推论：对于B$^\ast$空间, $(X^\ast)^{\perp}=0$.</p>
+<p>定理(Eberlein)：自反空间的单位球弱列紧.</p>
+<p>$1\leq p&lt;\infty$, $(L^p[0,1])^\ast=L^{p^\ast}[0,1]$</p>
+<p>$(C[0,1])^\ast=BV[0,1]:=\lbrace g:[0,1]$上的右连续有界变差函数,$g(0)=0\rbrace$</p>
+</blockquote>
+<h2 id="紧算子理论"><a href="#紧算子理论" class="headerlink" title="紧算子理论"></a>紧算子理论</h2><blockquote>
+<p>定义：线性算子$T:X\to Y$称为<u>紧算子</u>, 若它将$X$中的有界集映为$Y$中的列紧集.</p>
+<p>定理：$\mathcal{C}(X,Y)$在$L(X,Y)$中闭.</p>
+<p>定义：$A\in L(X,Y)$称为<u>全连续</u>, 如果它将弱收敛列映为收敛列.</p>
+<p>定理：紧算子是全连续的; 对于自反空间, 二者等价.</p>
+<p>定义：<u>有限秩算子</u>是指值域是有限维的有界线性算子.</p>
+<p>定理：$\overline{\mathcal{F}(X,Y)}\subset\mathcal{C}(X,<br>Y)$; 对于Hilbert空间, 二者相等.</p>
+<p>定理(紧算子的谱)：设$A:X\to Y$为紧算子, 则:</p>
+<ul>
+<li>$0\in \sigma(A)$或$X$是有限维空间</li>
+<li>$\sigma(A)\setminus 0=\sigma_p(A)\setminus0$</li>
+<li>$\sigma(A)$至多以$0$为聚点</li>
+</ul>
+<p>定理(自伴紧算子的结构): 若$A$为自伴紧算子, 则存在规范正交基$\lbrace e_n\rbrace$, 使得任意$x\in H$有: $x=\sum(x,e_n)e_n$, $Ax=\sum(x,e_n)\lambda_ne_n$</p>
+<p>定理: 若$A$为Hilbert空间上的紧算子, 则存在规范正交基$\lbrace e_n\rbrace$, $\lbrace f_n\rbrace$, 使得任意$x\in H$有: $x=\sum(x,e_n)e_n$, $Ax=\sum(x,e_n)\lambda_nf_n$</p>
+<p>定义：Banach空间之间的有界线性算子$T$称为是<u>Fredholm算子</u>, 如果$N(T)$有限维, 值域是闭的且余维数有限. <u>指标</u>$\mathrm{ind}(T):=\mathrm{dim}N(T)-\mathrm{codim}R(T)$</p>
+<p>定理：$\mathscr{F}(X,Y)$是$L(X,Y)/\mathcal{C}$的可逆元全体.</p>
+</blockquote>
+<h2 id="Banach代数"><a href="#Banach代数" class="headerlink" title="Banach代数"></a>Banach代数</h2><blockquote>
+<p>定义：<u>代数</u>是具备环结构的线性空间, 如果是含幺环则称为<u>含幺代数</u>; 如果是可除环(体), 则称为<u>可除代数</u>; 如果是交换环, 则称为<u>交换代数</u>.</p>
+<p>定义：<u>代数同态</u>是环同态的线性映射, 也可称为<u>可乘线性映射</u>; <u>代数同构</u>是代数同态的线性同构.    </p>
+<p>命题：对于含幺交换代数, 一个理想是极大的$\Leftrightarrow$对应的商代数可除</p>
+<p>定义：<u>Banach代数</u>是具备代数结构的Banach空间, 且乘法运算与范数相容. 典型的例子有$L(X)$, $C(M)$.</p>
+<p>定理(Gelfand)：可除交换Banach代数均同构于$\mathbb{C}$.</p>
+<p>推论：对于含幺交换Banach代数$A$, 极大理想全体与非零可乘线性泛函$A\to\mathbb{C}$全体一一对应.</p>
+<p>Gelfand表示：设$A$是含幺交换Banach代数, Gelfand表示是映射$\Gamma:A\to C(M)$, 其中$M$是$A$的极大理想全体, 也是非零可乘线性泛函全体, 对于后者来说Gelfand表示就是赋值映射$a\mapsto ev_a:M\to\mathbb{C}$</p>
+<p>定理：Gelfand表示是含幺交换Banach代数$A\to C(M)$的连续代数同态.</p>
+<p>定理: $\sigma(a)=\mathrm{Im}(\Gamma a)$</p>
+<p>定理：对于Gelfand表示$\Gamma$:</p>
+<ul>
+<li>$\Gamma$是单射$\Leftrightarrow A$是半单的即$\cap_{J\in M}J=0$ $\Leftrightarrow (\lim ||a^n||^{1/n}=0\Rightarrow a=0)$</li>
+<li>$\Gamma$是等距$\Leftrightarrow ||a^2||=||a||^2$</li>
+</ul>
+<p>定义：代数上的一个对合是映射$\ast:A\to A$, 满足$(\lambda a+\mu b)^\ast=\bar{\lambda}a^\ast+\bar{\mu}b^\ast$, $(ab)^\ast=b^\ast a^\ast$, $(a^\ast)^\ast=a$. 称$a$为Hermitian元, 如果$a^\ast=a$.</p>
+<p>定理: 任意元素可唯一分解为$a=x+iy$, 其中$x,y$均为Hermitian元. $e^\ast=e$, $\sigma(a^\ast)=\overline{\sigma(a)}$.</p>
+<p>定义: 具有对合的Banach代数如果满足$||a^\ast a||=||a||^2$, 则称为$C^\ast$代数.</p>
+<p>定理: 对于$C^\ast$代数, $||a^\ast||=||a||$, $||e||=1$, Hermitian元的谱点必为实数.</p>
+<p>定理(Gelfand-Naimark): 对于含幺交换$C^\ast$代数, Gelfand表示是$\ast$等距同构. 即含幺交换$C^\ast$代数均形如$C(M)$.</p>
+<p>定理(Gelfand-Naimark):对于任意$C^\ast$代数, 均$\ast$等距同构于$B(H)$的子代数.</p>
+<p>定理: $A$, $B$是含幺$C^\ast$代数, $B$是$A$的子代数, $b\in B$, 则$\sigma_A(b)=\sigma_B(b)$. 从而对于正规元$T\in A$, 考虑$A_T$为包含$e$, $T$, $T^\ast$的最小$C^\ast$代数, 则$A_T$是交换$C^\ast$代数, 可应用Gelfand表示.</p>
+<p>定理: $M(A_T)=\sigma(T)$</p>
+</blockquote>
+<h2 id="有界正规算子的谱分解"><a href="#有界正规算子的谱分解" class="headerlink" title="有界正规算子的谱分解"></a>有界正规算子的谱分解</h2><blockquote>
+<p>定义: Hilbert空间中的投影算子是$P\in B(H)$, 满足$P^2=P$, $P^\ast=P$. 记$M=\mathrm{ker}(I-P)=R(P)$为$H$的闭子空间, 则$P:H\to M$, $x-Px\in M^\perp$.</p>
+<p>定理: 投影算子的四则运算:</p>
+<ul>
+<li>$P_1+P_2$是投影算子$\Leftrightarrow$ $M_1\perp M_2$ $\Leftrightarrow$ $P_1P_2=0$</li>
+<li>$P_1-P_2$是投影算子$\Leftrightarrow$ $M_1\supset M_2$</li>
+<li>$P_1P_2$是投影算子$\Leftrightarrow$ $P_1P_2=P_2P_1$, 且$P_1P_2=P_{M_1\cap M_2}$</li>
+</ul>
+<p>定义: $\Omega\subset\mathbb{C}$, $\mathcal{B}$是$\Omega$的Borel $\sigma$代数, $E:\mathcal{B}\to P(H)$, 其中$P(H)$是$H$上的投影算子全体, 满足:</p>
+<ul>
+<li>$E(\Omega)=I$</li>
+<li>$A_n\in \mathcal{B}$互不相交, $E(\cup A_n)=\sum E(A_n)$</li>
+</ul>
+<p>则$(\Omega,\mathcal{B},E)$称为谱测度空间, $E$称为$\mathcal{B}$上的谱测度.</p>
+<p>定理: $E(A_1)E(A_2)=E(A_2)E(A_1)=E(A_1\cap A_2)$</p>
+<p>定理: $\forall x,y\in H$, $E_{x,x}(A):=(E(A)x,x)$是$\mathcal{B}$上的有限测度; $E_{x,y}(A):=(E(A)x,y)$是$\mathcal{B}$上的广义测度.</p>
+<p>定义: $f\in L^\infty(\Omega,\mathcal{B},E)$, 存在唯一的算子$T\in B(H)$满足$(Tx,y)=\int f\mathrm{d}E_{x,y}$, $||T||\leq||f||_\infty$. 记$T=\int_{\Omega} f\mathrm{d}E$.</p>
+<p>定理: 谱积分的性质:</p>
+<ul>
+<li>$\int (\lambda f+\mu g)\mathrm{d}E=\lambda\int f\mathrm{d}E+\mu\int g\mathrm{d}E$</li>
+<li>$(\int f\mathrm{d}E)^\ast=\int \bar{f}\mathrm{d}E$</li>
+<li>$\int\chi_A\mathrm{d}E=E(A)$</li>
+<li>$\int f\mathrm{d}E\int g\mathrm{d}E=\int fg\mathrm{d}E$</li>
+</ul>
+<p>定义: Hilbert空间上的一族单调增右连续的投影算子$E_\lambda$, $\lambda\in(-\infty,+\infty)$称为一个谱系, 如果满足s-$E(-\infty)=0$, s-$E(+\infty)=I$. 谱系与谱测度空间$(\mathbb{R},\mathcal{B},E)$一一对应, 从而也记$\int_\mathbb{R} f\mathrm{d}E=\int_{-\infty}^{+\infty}f(\lambda)\mathrm{d}E_\lambda$</p>
+<p>定义: $T$是$B(H)$中的正规算子, $\Gamma:A_T\to C(\sigma(T))$是$\ast$等距同构, 对任意$\varphi\in C(\sigma(T))$, 记$\varphi(T):=\Gamma^{-1}(\varphi)\in A_T$</p>
+<p>定理: 正规算子$T\in B(H)$:</p>
+<ul>
+<li>$(Tx,x)\geq0$ $\Leftrightarrow$ $\sigma(T)\subset[0,+\infty)$</li>
+<li>$T^\ast=T$ $\Leftrightarrow$ $\sigma(T)\subset\mathbb{R}$</li>
+<li>$f\in C(\sigma(T))$, $f\geq0$ $\Leftrightarrow$ $f(T)\geq0$</li>
+</ul>
+</blockquote>
+<p>从$C(\sigma(T))$到$L^\infty(\sigma(T))$: 固定$x,y\in H$, $(\varphi(T)x,y)$是$C(\sigma(T))$上的连续线性泛函, 由Riesz表示定理存在复Borel测度$\mu_{x,y}$, 使得$(\varphi(T)x,y)=\int \varphi\mathrm{d}\mu_{x,y}$. 对于任意$f\in L^\infty(\sigma(T))$, 定义$f(T)\in B(H)$, $(f(T)x,y)=\int f\mathrm{d}\mu_{x,y}$. 从而诱导出$\sigma(T)$上的谱测度$E(A):=\chi_A(T)$.</p>
+<blockquote>
+<p>定理: 对于正规算子$T\in B(H)$, 上述定义了唯一的谱测度$(\sigma(T),\mathcal{B},E)$满足对于任意$f\in L^\infty(\sigma(T))$, 有$f(T)=\int_{\sigma(T)}f\mathrm{d}E$</p>
+<p>推论: 取$f(\lambda)=\lambda$, 有$T=\int_{\sigma(T)}\lambda\mathrm{d}E$. 对于有界自伴算子, 有$T=\int_{-\infty}^{+\infty}\lambda\mathrm{d}E_\lambda$; 对于酉算子, 有$T=\int_0^{2\pi}e^{i\theta}\mathrm{d}F_\theta$</p>
+<p>定理: $||f(T)x||^2=\int |f|^2\mathrm{d}||Ex||^2$</p>
+<p>定理: 对于正规算子:</p>
+<ul>
+<li>$\sigma_r(T)=\emptyset$</li>
+<li>$\lambda_0\in\sigma(T)\Leftrightarrow$ 任意邻域$U$, $E(U)\neq 0$</li>
+<li>$\lambda_0\in\sigma_p(T)\Leftrightarrow$ $E(\lbrace\lambda_0\rbrace)\neq0$</li>
+</ul>
+<p>定义: 对于正规算子, 本质谱$\sigma_{ess}(T):=\lbrace\lambda:\forall$邻域$U,\mathrm{dim}E(U)H=+\infty\rbrace$, 离散谱$\sigma_d(T):=\sigma(T)\setminus\sigma_{ess}(T)$</p>
+<p>等价定义: $\sigma_{ess}(T):=\lbrace\lambda:\lambda I-T$不是Fredholm算子$\rbrace$(注: Fredholm算子即商掉紧算子的意义下可逆)</p>
+<p>等价定义: 离散谱即有限重数的孤立特征值, 非离散谱的谱点是本质谱.</p>
+</blockquote>
+<h2 id="无界算子"><a href="#无界算子" class="headerlink" title="无界算子"></a>无界算子</h2><blockquote>
+<p>定义: 稠定算子即定义域在全空间稠密的算子.</p>
+<p>定义: Hilbert空间上的稠定线性算子可良定义其共轭算子, 即满足$(Tx,y)=(x,T^\ast y)$, $\forall x\in D(T)$, $\forall y\in D(T^\ast)$. 其中$D(T^\ast)$是使等式成立的$y$的全体.</p>
+<p>定理: $D(T^\ast)=\lbrace y:\exists M_y$, $|(Tx,y)|\leq M_y||x||\rbrace$</p>
+<p>定义: 闭算子即图像$\Gamma(T)$在$X\times Y$中闭的算子.</p>
+<p>定义: 若线性算子$T$存在扩张$S$, 使得$\Gamma(S)=\overline{\Gamma(T)}$, 则称$S$是$T$的闭包, 记为$S=\overline{T}$, 称$T$是可闭化的.</p>
+<p>定理: $T$可闭化$\Leftrightarrow$ 若$(0,y)\in\overline{\Gamma(T)}$, 则$y=0$</p>
+<p>定理: 定义$V\in B(H\times H):(x,y)\mapsto(-y,x)$, 则对于Hilbert空间上的线性算子, $\Gamma(T^\ast)=^\perp(V\Gamma(T))$</p>
+<p>定理: $T^\ast$总是闭算子</p>
+<p>定理: $T$可闭化$\Leftrightarrow$ $T^\ast$稠定</p>
+<p>定义: 若$T\subset T^\ast$, 称$T$为对称算子; 若$T=T^\ast$, 称$T$为自伴算子; 若$\overline{T}$是自伴算子, 称$T$为本质自伴算子.</p>
+<p>定理: 若$A$是对称算子, 则$\mathrm{ker}(A\pm iI)=0$; 若$A$是对称闭算子, 则$R(A\pm iI)$闭.</p>
+<p>定理: 若$A$是对称算子, 则三者等价:</p>
+<ul>
+<li>$A$自伴</li>
+<li>$A$闭, $\mathrm{ker}(A^\ast\pm iI)=0$</li>
+<li>$R(A\mp iI)=H$</li>
+</ul>
+</blockquote>
+<p>定理: Hilbert空间上的自伴算子无论是否有界, 谱集均是实数.</p>
+<blockquote>
+<p>定义: $A$是对称算子, $U:=(A-iI)(A+iI)^{-1}$是$R(A+iI)$到$R(A-iI)$的等距算子, 称为$A$的Cayley变换. $A=i(I+U)(I-U)^{-1}$称为Cayley逆变换. 若$A$是闭算子, 则$U$也是闭算子; 若$A$是自伴算子, 则$U$是$H$上的酉算子. 反之对于$1\notin\sigma_p(U)$的等距算子若满足$R(I-U)$稠密均可进行Cayley反变换, 其反变换是对称算子且再进行Cayley变换则回到$U$. 若$U$定义域闭, 则$A$是闭算子; 若$U$是酉算子, 则$A$是自伴算子.</p>
+<p>定理: 对于Cayley变换$U$, $1\notin\sigma_p(U)$; $1\in\rho(U)$ $\Leftrightarrow A$是有界自伴算子</p>
+<p>定理: 设$(\Omega,\mathcal{B},E)$是谱测度空间, 对于任意可测函数$f$, 令$D:=\lbrace x:\int |f|^2\mathrm{d}E_{x,x}&lt;\infty\rbrace$, 则存在线性算子$A$, $D(A)=D$满足$\forall x,y\in D$, $(Ax,y)=\int f\mathrm{d}E_{x,y}$, 并且有s-$\lim\int_{|f|\leq n}f\mathrm{d}Ex=Ax$. 记$A=\int f\mathrm{d}E$. 若$f$实值, 则$A$自伴.</p>
+</blockquote>
+<p>利用Cayley变换将无界自伴算子转化为有界的酉算子, 利用有界正规算子的谱分解从而得到自伴算子的谱分解定理.</p>
+<blockquote>
+<p>定理: 若$A$是自伴算子, 则存在谱系$E_{\lambda}$, $A=\int_{-\infty}^{+\infty}\lambda\mathrm{d}E_\lambda$</p>
+<p>定理(Neumann): 若$A$是对称闭算子, 有$D(A^\ast)=D(A)\oplus\mathrm{ker}(A^\ast-iI)\oplus\mathrm{ker}(A^\ast+iI)$</p>
+<p>定义: 若$A$是对称闭算子, $n_\pm:=\mathrm{dim ker}(A^\ast\mp iI)$, 称$\mathrm{def}(A)=(n_+,n_-)$为$A$的亏指数.</p>
+<p>定理: 对称闭算子有自伴扩张$\Leftrightarrow$ $n_+=n_-$</p>
+<p>定理(Neumann准则): 设$C:H\to H$是共轭等距线性映射满足$C^2=I$, 则称$C$是一个共轭. 对于对称算子, 若存在共轭$C:D(A)\to D(A)$与$A$可交换, 则$A$有自伴扩张.</p>
+<p>定义: 对于对称算子, 若存在实数$c$, 使得$(Ax,x)\geq c(x,x)$, 则称$A$下半有界, 记作$A\geq c$.</p>
+<p>定理(Friedrichs): 若$A$是下半有界的对称算子, $A\geq c$, 则$A$存在自伴扩张$\hat{A}$, 并且有$\hat{A}\geq c$.</p>
+<p>定义: 设$A$, $B$是Hilbert空间上的稠定算子, 称$B$是关于$A$有界的, 如果$D(B)\supset D(A)$, 并且存在$a,b$使得$||Bx||\leq a||Ax||+b||x||$. 其中使不等式成立的$a$的下确界称为$B$关于$A$的界.</p>
+<p>等价定义: $||x||_1:=||x||+||Ax||$, $B:(D(A),||\cdot||_1)\to H$有界 </p>
+</blockquote>
+<p>定理: $B$关于$A$有界, 且界小于$1$, 则$A+B$可闭化$\Leftrightarrow$ $A$可闭化. 并且此时$D(\overline{A+B})=D(\overline{A})$  (注:个人将有界且界小于1简称为相对小)</p>
+<p>定义: 设$A$, $B$是Hilbert空间上的稠定算子, 称$B$是关于$A$紧的, 如果$D(B)\supset D(A)$, 并且$B:(D(A),||\cdot||_1)\to H$是紧的. </p>
+<p>定理: $B$是可闭化的, $B$关于$A$紧, 则$B$关于$A$有界, 且界是$0$.</p>
+<p>定理: $B$是可闭化的, 则$B$关于$A$紧$\Leftrightarrow$ $B$关于$A+B$紧</p>
+<p>定理(Kato-Rellich): $A$自伴, $B$是相对小的对称算子, 则$A+B$也是自伴算子.</p>
+<p>推论: $A$本质自伴, $B$是相对小的对称算子, 则$A+B$也是本质自伴的, 且$\overline{A+B}=\overline{A}+\overline{B}$</p>
+<p>定理: $A$本质自伴, $B$对称, $B$关于$A$有界且界等于$1$, 则$A+B$在$D(A)$上本质自伴.</p>
+<p>定理: $A$是下有界的自伴算子, $B$是相对小的对称算子, 则$A+B$也是下有界的自伴算子.</p>
+<p>定理: 自伴算子在相对小的对称算子的扰动下, 离散谱点在计重数的意义下个数保持不变, 且分布在原谱点周围.</p>
+<p>定理(Weyl): 自伴算子在相对紧的对称算子扰动下本质谱不变.</p>
+<h2 id="算子半群"><a href="#算子半群" class="headerlink" title="算子半群"></a>算子半群</h2><blockquote>
+<p>定义: Banach空间$X$上的一族到自身的有界线性算子$T(t)$ $(t\geq0)$称为强连续线性算子半群, 如果满足:</p>
+<ul>
+<li>$T(0)=I$</li>
+<li>$T(s)T(t)=T(s+t)$</li>
+<li>$\forall x\in X$, $T(t)x$关于$t$连续</li>
+</ul>
+<p>定义: $A_t:=t^{-1}(T(t)-I)$, $D(A):=\lbrace x:\lim_{t\to0} A_tx$存在$\rbrace$, 线性算子$A:D(A)\to X$, $x\mapsto\lim_{t\to0}A_tx$称为算子半群的无穷小生成元.</p>
+<p>定理: $A$是线性稠定闭算子. $\forall x\in D(A)$, $\frac{\mathrm{d}}{\mathrm{d}t}T(t)x=T(t)Ax=AT(t)x$</p>
+<p>定义: 对于算子半群, 如果$||T(t)||\leq 1$, 则称为压缩半群.</p>
+<p>定理: 对于压缩半群, $\lbrace\mathrm{Re}(\lambda)&gt;0\rbrace\subset\rho(A)$, $(\lambda I-A)^{-1}=\int_0^\infty e^{-\lambda t}T(t)\mathrm{d}t$</p>
+<p>定理(Hille-Yosida): 对于线性稠定闭算子, 成为压缩半群的生成元$\Leftrightarrow$</p>
+<ul>
+<li>$(0,+\infty)\subset\rho(A)$</li>
+<li>$||R_\lambda(A)||\leq \lambda^{-1}$</li>
+</ul>
+<p>定理(Hille-Yosida-Phillips): 对于线性稠定闭算子, 成为算子半群的生成元$\Leftrightarrow$ $\exists \omega, M&gt;0$</p>
+<ul>
+<li>$(\omega,+\infty)\subset\rho(A)$</li>
+<li>$||R_\lambda(A)^n||\leq M(\lambda-\omega)^{-n}$</li>
+</ul>
+<p>定义: Hilbert空间上的一族酉算子$U(t)$ $(t\in\mathbb{R})$称为强连续酉算子群, 如果:</p>
+<ul>
+<li>$U(t)U(s)=U(t+s)$</li>
+<li>$\forall x\in H$, $U(t)x$关于$t$连续</li>
+</ul>
+<p>定理: 强连续压缩半群的共轭半群$T^\ast(t)$也是强连续压缩半群.</p>
+<p>定理(Stone): 对于Hilbert空间上的稠定闭算子$A$, 成为强连续酉算子群的生成元$\Leftrightarrow$ 存在自伴算子$B$, $A=iB$. 此时$U(t)=\mathrm{exp}(itB)$. 若取$B$的谱族$E_\lambda$, 则$U(t)=\int_{-\infty}^{+\infty} e^{it\lambda}\mathrm{d}E_\lambda$</p>
+</blockquote>
+]]></content>
+  </entry>
+</search>
